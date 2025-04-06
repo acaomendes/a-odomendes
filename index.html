@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ação do Mendes - iPhone 16 Pro Max</title>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Estilo moderno -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+      background: linear-gradient(to bottom, #f9f9f9, #fff);
+      color: #111;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 30px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 24px;
+      color: #555;
+    }
+
+    img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .countdown {
+      font-size: 20px;
+      color: #e60000;
+      margin: 20px 0;
+    }
+
+    .form-group {
+      margin: 20px 0;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    input[type="email"]:focus {
+      border-color: #25D366;
+      outline: none;
+    }
+
+    .cta a,
+    .cta button {
+      background-color: #25D366;
+      color: #fff;
+      padding: 14px 22px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 12px 0;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover,
+    .cta button:hover {
+      background-color: #1eb14a;
+    }
+
+    .pix-btn {
+      background-color: #FFB800;
+      color: #111;
+    }
+
+    .pix-btn:hover {
+      background-color: #e6a800;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Pixel fallback -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <div class="container">
+    <div class="title">🎁 Sorteio Especial: iPhone 16 Pro Max 🎁</div>
+    <div class="subtitle">Só hoje: bilhetes por R$0,15. Participe agora!</div>
+    <img src="https://i.imgur.com/UqRgMvI.png" alt="iPhone 16 Pro Max" />
+
+    <div class="countdown" id="timer">Oferta expira em: 00:00:00</div>
+
+    <div class="form-group">
+      <form id="lead-form">
+        <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" required />
+        <div class="cta">
+          <button type="submit">Reservar Bilhete</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/5562996674379?text=Quero+participar+da+promo%C3%A7%C3%A3o+do+iPhone+16+Pro+Max!" target="_blank">
+        Falar com Atendimento
+      </a>
+    </div>
+
+    <div class="cta">
+      <a class="pix-btn" href="https://SEULINKPIX.com" target="_blank">
+        Comprar Via Pix 🔥
+      </a>
+    </div>
+  </div>
+
+  <!-- Timer Script -->
+  <script>
+    const timerElement = document.getElementById("timer");
+    const expireAt = new Date().getTime() + 3600 * 1000;
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = expireAt - now;
+
+      if (distance < 0) {
+        timerElement.textContent = "Oferta expirada!";
+        return;
+      }
+
+      let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let s = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.textContent = `Oferta expira em: ${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+
+  <!-- Envio para Google Sheets -->
+  <script>
+    const form = document.getElementById("lead-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const url = "SUA_URL_DO_WEBAPP_AQUI"; // Substitua aqui com a URL do Google Apps Script
+
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `email=${encodeURIComponent(email)}`
+      })
+        .then((res) => res.text())
+        .then((data) => {
+          alert("Email enviado com sucesso! Boa sorte no sorteio 🎉");
+          form.reset();
+        })
+        .catch((err) => {
+          console.error("Erro:", err);
+          alert("Erro ao enviar. Tente novamente.");
+        });
+    });
+  </script>
+</body>
+</html>
